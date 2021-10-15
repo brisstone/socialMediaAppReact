@@ -6,6 +6,8 @@ import "./topbar.css";
 import { FaSearch, GoPerson, BsFillPersonFill, BsFillChatSquareTextFill, FaRocketchat } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";
 import { MdNotifications } from "react-icons/md";
+import { MdPerson } from "react-icons/md";
+
 
 export default function Topbar() {
     return (
@@ -16,7 +18,7 @@ export default function Topbar() {
             <div className="topbarCenter">
                 <div className="searchbar">
                     {/* <Button/> */}
-                    <FaSearch />
+                    <FaSearch  className="searchIcon" />
                     <input className="searchInput" placeholder ="search for friend, post or video"/>
                 </div>
             </div>
@@ -25,23 +27,27 @@ export default function Topbar() {
                     <span className="topbarLink">Home</span>
                     <span className="topbarLink">Timeline</span>
                 </div>
-            </div>
-            <div className="topbarIcons">
-                <div className="topbarIcon">
-                    <GoPerson/> 
-                </div>
-                <div className="topbarIconBadge">1</div>
-                <div className="topbarIcon">
-                    <AiFillNotification/>
-                </div>
-                <div className="topbarIconBadge">2</div>
-                <div className="topbarIcon">
-                    <FaRocketchat/>
-                </div>
-                <div className="topbarIconBadge">2</div>
-
+            
+                <div className="topbarIcons">
+                    <div className="topbarIcon">
+                        <MdPerson/> 
+                        <span className="topbarIconBadge">1</span>
+                    </div>
                 
+                    <div className="topbarIcon">
+                        <AiFillNotification/>
+                        <span className="topbarIconBadge">2</span>
+                    </div>
+                
+                    <div className="topbarIcon">
+                        <FaRocketchat/>
+                        <span className="topbarIconBadge">3</span>
+                    </div>
+                
+                    <img src="/assets/person/3.jpg"  className="topbarImg" alt="person1"/>
+                    
+                </div>
             </div>
-        </div>
+     </div>
     )
 }
